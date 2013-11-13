@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<title>Hold to drag</title>
+	<style type="text/css">
+		/* Very basic cross-browser reset */
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+
+		body {
+			background: white;
+			color: #999;
+			font-family: sans-serif;
+		}
+
+		h1 {
+			margin: 5% 0 1%;
+			color: #333;
+			text-align: center;
+		}
+
+		h3 {
+			font: italic normal 1.2em "Georgia", serif;
+			text-align: center;
+			margin-bottom: 3%;
+		}
+
+		.items {
+			background: #55bc75;
+			font-family: Noteworthy, serif;
+			color: #444;
+		}
+
+		.items h2 {
+			color: #333;
+		}
+
+		.items li {
+			padding: 1.1em 2em;
+			border-bottom: thin solid #3f9f5d;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="container">
+		<header>
+			<h1>Hold items to drag them around</h1>
+			<h3>We wait for a 500ms "hold" event, so native scrolling still works on touch devices</h3>
+		</header>
+
+		<div id="main" role="main">
+			 <ol class="items">
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 	<li>
+			 		<h2>Draggable list item</h2>
+			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			 	</li>
+			 </ol>
+		</div>
+	</div>
+
+
+	<!-- Dependencies -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="lib/gs/minified/TweenLite.min.js"></script>
+	<script src="lib/gs/minified/easing/EasePack.min.js"></script>
+	<script src="lib/gs/minified/utils/Draggable.min.js"></script>
+
+	<!-- Custom JavaScript -->
+	<script src="script.js"></script>
+
+	<!-- Live reload -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
