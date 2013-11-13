@@ -38,6 +38,11 @@
 		.items li {
 			padding: 1.1em 2em;
 			border-bottom: thin solid #3f9f5d;
+			transition: background 0.15s ease-in-out;
+		}
+
+		li.dragging {
+			background: #7aca93;
 		}
 	</style>
 </head>
@@ -52,51 +57,51 @@
 
 		<div id="main" role="main">
 			 <ol class="items">
-			 	<li>
+			 	<li data-id="1">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="2">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="3">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="4">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="5">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="6">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="7">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="8">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="9">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="10">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="11">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
-			 	<li>
+			 	<li data-id="12">
 			 		<h2>Draggable list item</h2>
 			 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 			 	</li>
@@ -107,12 +112,18 @@
 
 	<!-- Dependencies -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="lib/jquery.hammer.min.js"></script>
 	<script src="lib/gs/minified/TweenLite.min.js"></script>
+	<script src="lib/gs/minified/plugins/CSSPlugin.min.js"></script>
 	<script src="lib/gs/minified/easing/EasePack.min.js"></script>
 	<script src="lib/gs/minified/utils/Draggable.min.js"></script>
 
 	<!-- Custom JavaScript -->
 	<script src="script.js"></script>
+
+	<script>
+		var sorter = new ListSorter( $("#container"), $(".items li") );
+	</script>
 
 	<!-- Live reload -->
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
